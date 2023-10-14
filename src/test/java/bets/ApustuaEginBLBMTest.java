@@ -32,7 +32,7 @@ public class ApustuaEginBLBMTest {
 			int abg = 0;
 			boolean b = sut.ApustuaEgin(u, quotes, balioa, abg);
 		} catch (Exception e) {
-
+			fail();
 		}
 	}
 	
