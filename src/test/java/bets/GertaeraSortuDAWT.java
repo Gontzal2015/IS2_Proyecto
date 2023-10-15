@@ -14,9 +14,9 @@ import domain.Question;
 import domain.Quote;
 import dataAccess.DataAccess;
 
-public class GertaeraSortuDABT {
-
+public class GertaeraSortuDAWT {
 	static DataAccess sut= new DataAccess();
+	static TestDataAccess testDA= new TestDataAccess();
 	Date fecha= new Date(103,8,10);
 	
 	@Test
@@ -57,4 +57,6 @@ public class GertaeraSortuDABT {
 				fail();
 			}
 		}
+}
+
 }
