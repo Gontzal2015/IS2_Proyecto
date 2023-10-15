@@ -16,11 +16,11 @@ import dataAccess.DataAccess;
 
 public class GertaeraSortuDAWT {
 	static DataAccess sut= new DataAccess();
-	static TestDataAccess testDA= new TestDataAccess();
 	Date fecha= new Date(103,8,10);
 	
 	@Test
 	public void test1() { 
+		//intentar añadir un evento con un deporte que no esta registrado
 		try {
 			boolean b;
 			b=sut.gertaerakSortu("Atletico-Getafe", fecha, "balonpie");
@@ -34,9 +34,10 @@ public class GertaeraSortuDAWT {
 	
 	@Test
 	public void test3() { 
+		//intentar aadir un evento existente
 		try {
 			boolean b;
-			b=sut.gertaerakSortu("Atletico-Athletic", fecha, "futbol");
+			b=sut.gertaerakSortu("Atletico-Athletic", new Date(123, 9,17), "futbol");
 			assertFalse(b);
 		}
 		catch(Exception e){
@@ -47,9 +48,10 @@ public class GertaeraSortuDAWT {
 		
 		@Test
 		public void test2() { 
+			//añadir un nuevo evento
 			try {
 				boolean b;
-				b=sut.gertaerakSortu("Atletico-Getafe", fecha, "futbol");
+				b=sut.gertaerakSortu("Madrid-Barcelona", new Date(150, 9,12), "futbol");
 				assertTrue(b);
 			}
 			catch(Exception e){
@@ -57,6 +59,4 @@ public class GertaeraSortuDAWT {
 				fail();
 			}
 		}
-}
-
 }
