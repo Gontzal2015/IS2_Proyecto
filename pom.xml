@@ -56,7 +56,7 @@
 		<sonar.organization>gontzal2015</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.projectKey>Gontzal2015_IS2_Proyecto</sonar.projectKey>
-		<sonar.login>4659c05c956339fc1748b55e2104f21b49c5a028</sonar.login>
+		<sonar.login>d453add40f53196680de90ecaa4c25d52e56554c</sonar.login>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/junit/junit -->
